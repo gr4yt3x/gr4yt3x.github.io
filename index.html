@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gustavo Lemos — Portfolio</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    body {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1, h2 {
+      font-weight: 600;
+      margin-bottom: .5rem;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .links a {
+      margin-right: 1rem;
+    }
+
+    .project {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+      font-size: .9rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Gustavo Lemos</h1>
+    <p>Software Developer — writting code, building things. 👋<br> You can see full information about my projects on my LinkedIn profile :)</p>
+
+    <p class="links">
+      <a href="https://www.linkedin.com/in/gustavo-s-lemos/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/gr4yt3x" target="_blank">GitHub</a>
+      <a href="mailto:l3ble08@gmail.com">Email</a>      
+
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+		I'm a software developer currently hacking on personal and open-source projects in Ruby and Go.
+
+		Over the years I've messed around with JavaScript, PHP, Python, and plenty of other tools and languages.
+
+		<br>
+		<br>
+		Main interests: systems programming, building scalable systems, and the full software growth cycle — from early prototypes through 		   to production and beyond.
+     </p>
+    </section>
+    <hr>
+    <section>
+      <h2>Projects / Work</h2>
+      <div class="project">
+        <strong>Stocks in the Future - open source tool</strong><br>
+        I've been working with other programmers through Slack and GitHub issues/PRs to ship changes in the stocks-in-the-future codebase.<br>
+The system uses Rails 8, Pundit for authorization, and PostgreSQL as the database.<br><br>
+
+The team was already following the "expand and contract" pattern, and I received guidance from a more experienced developer to implement changes with that approach in mind. One of the features was intentionally split into two PRs so the system could support both versions at the same time, with all existing and new tests passing, before removing the old path.<br>
+        
+        
+
+        <br><a href="https://github.com/rubyforgood/stocks-in-the-future" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project">
+  		<strong>Flipsheep - Whitelabel game management platform</strong><br>
+        Worked on a Laravel-based platform used to manage users, wallets, campaigns, and games across multiple clients.<br>
+        Implemented features such as deposit bonus campaigns, alternative wallets, usage analytics (active users heatmap), and game statistics like most-played games.<br>
+        Improved performance on the games page, refactored controller logic into services for better modularity, and fixed multiple production bugs.<br><br>
+
+        The system uses PHP (Laravel 11), MariaDB with Eloquent ORM, Blade, Bootstrap, and PHPUnit for testing.<br>
+        Code was maintained and reviewed using Bitbucket.<br><br>
+
+        <a target="_blank">No link for this one</a>
+      </div>
+        
+      <div class="project">
+        <strong>Avisabox</strong><br>
+        Build the MVP from day 0 within a team of 4 engineers, did all the logic of Condominiums, Residents, Deliverers and Packages. From register of Condominium to notification in the Resident whatsapp.
+        Also did integration with whatsapp bot microservice that was built using golang.
+		
+        <br>
+		<br>
+		The tecnologies used were: <br>
+        Typescript, Javascript, Node.js, Adonisjs<br>
+        Mysql, Prisma-ORM<br>
+        <br><a href="https://avisabox.com.br" target="_blank">View on their website</a>
+      </div>  
+
+    </section>
+
+
+  </main>
+
+  <footer>
+    © 2026 Gustavo Lemos — Built with minimal HTML & CSS.
+  </footer>
+
+</body>
+</html>
