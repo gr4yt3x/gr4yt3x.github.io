@@ -6,159 +6,321 @@
   <title>Gustavo Lemos — Portfolio</title>
 
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #fff;
-      color: #111;
-      line-height: 1.6;
+    :root {
+      --bg: #0d121a;
+      --panel: #141b24;
+      --panel-2: #1a2430;
+      --text: #f4f6f8;
+      --muted: #b5c0cd;
+      --accent: #7dd3fc;
+      --accent-2: #a7f3d0;
+      --border: #233041;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: 0;
+      font-family: "Space Grotesk", "IBM Plex Sans", "Avenir", "Segoe UI", sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 10% 0%, #1a2332, transparent),
+        radial-gradient(1000px 500px at 90% 10%, #122030, transparent),
+        var(--bg);
+      line-height: 1.6;
     }
 
-    h1, h2 {
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 32px;
+      background: linear-gradient(145deg, rgba(125, 211, 252, 0.12), rgba(167, 243, 208, 0.08));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0;
+      letter-spacing: -0.02em;
       font-weight: 600;
-      margin-bottom: .5rem;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 16px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .links a {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .links a:hover {
+      background: var(--panel-2);
+      border-color: var(--accent);
+      text-decoration: none;
     }
 
     a {
-      color: #0366d6;
+      color: var(--accent);
       text-decoration: none;
     }
 
     a:hover {
+      color: var(--accent-2);
       text-decoration: underline;
     }
 
-    .links a {
-      margin-right: 1rem;
+    section {
+      margin-bottom: 32px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
     }
 
     .project {
-      margin-bottom: 1rem;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .project strong {
+      color: var(--text);
+      font-size: 18px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .project-links {
+      display: inline-flex;
+      gap: 8px;
+      margin-left: 8px;
+    }
+
+    .project-links a {
+      font-size: 13px;
+      color: var(--accent);
+      padding: 2px 8px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .project-links a:hover {
+      background: var(--panel-2);
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
     }
 
     footer {
-      margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 1px solid #eee;
-      font-size: .9rem;
-      color: #555;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .wrap {
+        padding: 24px 16px 40px;
+      }
+
+      header {
+        padding: 24px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div class="wrap">
+    <header>
+      <h1>Gustavo Lemos</h1>
+      <p class="subtitle">Software Developer — writing code, building things. 👋<br> You can see full information about my projects on my LinkedIn profile :)</p>
 
-  <header>
-    <h1>Gustavo Lemos</h1>
-    <p>Software Developer — writting code, building things. 👋<br> You can see full information about my projects on my LinkedIn profile :)</p>
-
-    <p class="links">
-      <a href="https://www.linkedin.com/in/gustavo-s-lemos/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/gr4yt3x" target="_blank">GitHub</a>
-      <a href="mailto:l3ble08@gmail.com">Email</a>      
-	  <a href="https://drive.google.com/file/d/14qoiMGR0zFCKnwKOqYV67K0s6XBtvUcc/view">Resume</a>   
-    </p>
-  </header>
-
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-		I'm a software developer currently hacking on personal and open-source projects in Ruby and Go.
-
-		Over the years I've messed around with JavaScript, PHP, Python, and plenty of other tools and languages.
-
-		<br>
-		<br>
-		Main interests: systems programming, building scalable systems, and the full software growth cycle — from early prototypes through 		   to production and beyond.
-     </p>
-    </section>
-    <hr>
-    <section>
-      <h2>Projects</h2>
-      <div class="project">
-        <strong><a href="https://subscriptify.gustavolemos.dev/" target="_blank">Subscriptify</a></strong>
-        <a href="https://github.com/gr4yt3x/subscriptify" target="_blank" style="margin-left: .5rem;" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.99-.4 3.01-.4s2.05.13 3.01.4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-        <br>
-        Subscription management platform built on top of Asaas, combining billing automation, customer self-service, retention workflows, and advanced analytics in one system.
+      <div class="links">
+        <a href="https://www.linkedin.com/in/gustavo-s-lemos/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/gr4yt3x" target="_blank">GitHub</a>
+        <a href="mailto:l3ble08@gmail.com">Email</a>
+        <a href="https://drive.google.com/file/d/14qoiMGR0zFCKnwKOqYV67K0s6XBtvUcc/view" target="_blank">Resume</a>
       </div>
-    </section>
-    <hr>
-    <section>
-      <h2>Work Experience</h2>
-      <div class="project">
-        <strong>app.abasteci.com.br</strong><br>
-        Developed an automated fuel price data collection system using official APIs, with scheduled scraping routines and cloud-based processing infrastructure.
-Built geographic mapping logic, PostgreSQL data pipelines, and monitoring workflows using Cloudflare tools<br>
+    </header>
 
-        Tech stack: Node.js, Cloudflare Workers, PostgreSQL, NeonDB, APIs REST, Data Scraping<br>
-      </div>
+    <main>
+      <section>
+        <div class="card">
+          <h2>About Me</h2>
+          <p>
+            I'm a software developer currently hacking on personal and open-source projects in Ruby and Go.
+            Over the years I've messed around with JavaScript, PHP, Python, and plenty of other tools and languages.
+          </p>
+          <br>
+          <p>
+            Main interests: systems programming, building scalable systems, and the full software growth cycle — from early prototypes through to production and beyond.
+          </p>
+        </div>
+      </section>
 
-      <div class="project">
-        <strong>SistemaLeto</strong><br>
-        Developed an MVP platform for managing Boletos for solar energy companies, including PDF data extraction, automated validation, notifications, and cloud storage integration.
-Implemented recurring alerts, weekly financial summaries, and scalable storage architecture with automated backup workflows<br>
+      <section>
+        <div class="card">
+          <h2>Projects</h2>
+          <div class="project">
+            <strong>
+              Subscriptify
+              <span class="project-links">
+                <a href="subscriptify.html">Details</a>
+                <a href="https://subscriptify.gustavolemos.dev/" target="_blank">Demo</a>
+                <a href="https://github.com/gr4yt3x/subscriptify" target="_blank">GitHub</a>
+              </span>
+            </strong>
+            <p style="color: var(--muted); margin-top: 8px;">
+              Subscription management platform built on top of Asaas, combining billing automation, customer self-service, retention workflows, and advanced analytics in one system.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        Tech stack: Ruby on Rails 8, ActiveJob, SolidQueue, PostgreSQL, ActiveRecord, Google Drive API, Cloudflare R2, Mailgun, RSpec, FactoryBot, AuthenticationZero, CSS-ZERO<br>
-      </div>
+      <section>
+        <div class="card">
+          <h2>Work Experience</h2>
+          
+          <div class="project">
+            <strong>app.abasteci.com.br</strong>
+            <p style="color: var(--muted); margin-top: 8px;">
+              Developed an automated fuel price data collection system using official APIs, with scheduled scraping routines and cloud-based processing infrastructure.
+              Built geographic mapping logic, PostgreSQL data pipelines, and monitoring workflows using Cloudflare tools.
+            </p>
+            <p style="color: var(--muted); margin-top: 8px; font-size: 14px;">
+              <strong style="color: var(--text);">Tech stack:</strong> Node.js, Cloudflare Workers, PostgreSQL, NeonDB, APIs REST, Data Scraping
+            </p>
+          </div>
 
-      <div class="project">
-   		<strong>Flipsheep - Whitelabel game management platform</strong><br>
-        Worked on a Laravel-based platform used to manage users, wallets, campaigns, and games across multiple clients.<br>
-        Implemented features such as deposit bonus campaigns, alternative wallets, usage analytics (active users heatmap), and game statistics like most-played games.<br>
-        Improved performance on the games page, refactored controller logic into services for better modularity, and fixed multiple production bugs.<br><br>
+          <div class="project">
+            <strong>SistemaLeto</strong>
+            <p style="color: var(--muted); margin-top: 8px;">
+              Developed an MVP platform for managing Boletos for solar energy companies, including PDF data extraction, automated validation, notifications, and cloud storage integration.
+              Implemented recurring alerts, weekly financial summaries, and scalable storage architecture with automated backup workflows.
+            </p>
+            <p style="color: var(--muted); margin-top: 8px; font-size: 14px;">
+              <strong style="color: var(--text);">Tech stack:</strong> Ruby on Rails 8, ActiveJob, SolidQueue, PostgreSQL, ActiveRecord, Google Drive API, Cloudflare R2, Mailgun, RSpec, FactoryBot, AuthenticationZero, CSS-ZERO
+            </p>
+          </div>
 
-        The system uses PHP (Laravel 11), MariaDB with Eloquent ORM, Blade, Bootstrap, and PHPUnit for testing.<br>
-        Code was maintained and reviewed using Bitbucket.<br><br>
+          <div class="project">
+            <strong>Flipsheep - Whitelabel game management platform</strong>
+            <p style="color: var(--muted); margin-top: 8px;">
+              Worked on a Laravel-based platform used to manage users, wallets, campaigns, and games across multiple clients.
+              Implemented features such as deposit bonus campaigns, alternative wallets, usage analytics (active users heatmap), and game statistics like most-played games.
+              Improved performance on the games page, refactored controller logic into services for better modularity, and fixed multiple production bugs.
+            </p>
+            <p style="color: var(--muted); margin-top: 8px;">
+              The system uses PHP (Laravel 11), MariaDB with Eloquent ORM, Blade, Bootstrap, and PHPUnit for testing.
+              Code was maintained and reviewed using Bitbucket.
+            </p>
+          </div>
 
-        <a target="_blank">No link for this one</a>
-      </div>
-        
-      <div class="project">
-        <strong>Avisabox</strong><br>
-        Build the MVP from day 0 within a team of 4 engineers, did all the logic of Condominiums, Residents, Deliverers and Packages. From register of Condominium to notification in the Resident whatsapp.
-        Also did integration with whatsapp bot microservice that was built using golang.
-		
-        <br>
-		<br>
-		The tecnologies used were: <br>
-        Typescript, Javascript, Node.js, Adonisjs<br>
-        Mysql, Prisma-ORM<br>
-        <br><a href="https://avisabox.com.br" target="_blank">View on their website</a>
-      </div>  
+          <div class="project">
+            <strong>
+              Avisabox
+              <span class="project-links">
+                <a href="https://avisabox.com.br" target="_blank">Website</a>
+              </span>
+            </strong>
+            <p style="color: var(--muted); margin-top: 8px;">
+              Built the MVP from day 0 within a team of 4 engineers, did all the logic of Condominiums, Residents, Deliverers and Packages. From register of Condominium to notification in the Resident whatsapp.
+              Also did integration with whatsapp bot microservice that was built using golang.
+            </p>
+            <p style="color: var(--muted); margin-top: 8px; font-size: 14px;">
+              <strong style="color: var(--text);">Tech stack:</strong> TypeScript, JavaScript, Node.js, Adonisjs, MySQL, Prisma-ORM
+            </p>
+          </div>
+        </div>
+      </section>
 
-    </section>
-    <hr>
-    <section>
-      <h2>Volunteer Work</h2>
-      <div class="project">
-        <strong>Stocks in the Future - open source tool</strong><br>
-        I've been working with other programmers through Slack and GitHub issues/PRs to ship changes in the stocks-in-the-future codebase.<br>
-The system uses Rails 8, Pundit for authorization, and PostgreSQL as the database.<br><br>
+      <section>
+        <div class="card">
+          <h2>Volunteer Work</h2>
+          
+          <div class="project">
+            <strong>
+              Stocks in the Future - open source tool
+              <span class="project-links">
+                <a href="https://github.com/rubyforgood/stocks-in-the-future" target="_blank">GitHub</a>
+              </span>
+            </strong>
+            <p style="color: var(--muted); margin-top: 8px;">
+              I've been working with other programmers through Slack and GitHub issues/PRs to ship changes in the stocks-in-the-future codebase.
+              The system uses Rails 8, Pundit for authorization, and PostgreSQL as the database.
+            </p>
+            <p style="color: var(--muted); margin-top: 8px;">
+              The team was already following the "expand and contract" pattern, and I received guidance from a more experienced developer to implement changes with that approach in mind. One of the features was intentionally split into two PRs so the system could support both versions at the same time, with all existing and new tests passing, before removing the old path.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-The team was already following the "expand and contract" pattern, and I received guidance from a more experienced developer to implement changes with that approach in mind. One of the features was intentionally split into two PRs so the system could support both versions at the same time, with all existing and new tests passing, before removing the old path.<br>
-        
-        
-
-        <br><a href="https://github.com/rubyforgood/stocks-in-the-future" target="_blank">View on GitHub</a>
-      </div>
-    </section>
-
-
-  </main>
-
-  <footer>
-    © 2026 Gustavo Lemos — Built with minimal HTML & CSS.
-  </footer>
-
+    <footer>
+      © 2026 Gustavo Lemos — Built with minimal HTML & CSS.
+    </footer>
+  </div>
 </body>
 </html>
