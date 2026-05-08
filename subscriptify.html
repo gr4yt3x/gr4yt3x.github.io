@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Subscriptify | Billing Platform on Asaas</title>
+    <style>
+      :root {
+        --bg: #0d121a;
+        --panel: #141b24;
+        --panel-2: #1a2430;
+        --text: #f4f6f8;
+        --muted: #b5c0cd;
+        --accent: #7dd3fc;
+        --accent-2: #a7f3d0;
+        --border: #233041;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", "IBM Plex Sans", "Avenir", "Segoe UI", sans-serif;
+        color: var(--text);
+        background: radial-gradient(1200px 600px at 10% 0%, #1a2332, transparent),
+          radial-gradient(1000px 500px at 90% 10%, #122030, transparent),
+          var(--bg);
+      }
+
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 48px 24px 80px;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px;
+        background: linear-gradient(145deg, rgba(125, 211, 252, 0.12), rgba(167, 243, 208, 0.08));
+        border: 1px solid var(--border);
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 40px;
+        margin: 0;
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle {
+        font-size: 18px;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      section {
+        margin-top: 32px;
+        display: grid;
+        gap: 20px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 20px;
+      }
+
+      .card h2 {
+        margin: 0 0 12px;
+        font-size: 20px;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      li {
+        padding: 10px 12px;
+        background: var(--panel-2);
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        color: var(--muted);
+      }
+
+      li strong {
+        color: var(--text);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 16px;
+      }
+
+      .stat {
+        background: var(--panel);
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        padding: 16px;
+        text-align: center;
+      }
+
+      .stat span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 6px;
+      }
+
+      .stat strong {
+        font-size: 22px;
+      }
+
+      .note {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="pill-row">
+          <span class="pill">SaaS Billing</span>
+          <span class="pill">Asaas Integration</span>
+          <span class="pill">Rails 8</span>
+          <span class="pill">Hosted on Heroku + Neon</span>
+        </div>
+        <h1>Subscriptify</h1>
+        <p class="subtitle">
+          A full-stack subscription and recurring billing platform built on top of Asaas,
+          focused on automating customer management, billing workflows, and recovery for
+          recurring businesses (gyms, schools, digital subscriptions).
+        </p>
+      </header>
+
+      <div style="margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--panel);">
+        <img src="assets/subscriptify-dashboard.png" alt="Subscriptify Dashboard" style="width: 100%; display: block;">
+      </div>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Platform Overview</h2>
+          <p>
+            Subscriptify is a business management layer on top of the Asaas API. Instead of
+            forcing teams to work directly inside the payment provider dashboard, the platform
+            centralizes customer lifecycle, plans, subscriptions, checkout flows, and
+            webhook-driven updates into one place.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Architecture Highlights</h2>
+          <p>
+            Payments and subscriptions are handled through Asaas integration, while internal
+            logic manages customer profiles, plan data, subscription states, checkout sessions,
+            webhook persistence, and safe retries for critical operations.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Hosting</h2>
+          <p>
+            Server deployed on Heroku and PostgreSQL hosted on NeonDB. This setup keeps the
+            platform cloud-ready while still lightweight for a portfolio deployment.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2>Work Breakdown (Based on Commit History)</h2>
+          <div class="stats">
+            <div class="stat">
+              <span>Features</span>
+              <strong>61%</strong>
+            </div>
+            <div class="stat">
+              <span>Fixes</span>
+              <strong>18%</strong>
+            </div>
+            <div class="stat">
+              <span>Tests</span>
+              <strong>11%</strong>
+            </div>
+            <div class="stat">
+              <span>Refactors</span>
+              <strong>10%</strong>
+            </div>
+          </div>
+          <p class="note">
+            Percentages estimated from commit messages and categorized into features, fixes,
+            tests, and refactors/migrations.
+          </p>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Implemented</h2>
+          <ul>
+            <li><strong>Public plan landing pages</strong> with checkout CTA and FAQ.</li>
+            <li><strong>Customer management</strong> (CRUD, validation, normalization, PII-safe updates).</li>
+            <li><strong>Plans and products</strong> management with company scoping.</li>
+            <li><strong>Subscriptions</strong> model, endpoints, and lifecycle activation logic.</li>
+            <li><strong>Asaas integration</strong> with provider adapter, customer sync, and payment creation.</li>
+            <li><strong>Checkout sessions</strong> and webhook persistence.</li>
+            <li><strong>Webhook ingestion</strong> with access-token validation.</li>
+            <li><strong>Race-condition guards</strong> in customer and subscription creation.</li>
+            <li><strong>Hosted infrastructure</strong> on Heroku + NeonDB.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Not Yet Implemented</h2>
+          <ul>
+            <li><strong>Notifications</strong> (email/WhatsApp delivery system).</li>
+            <li><strong>Customer portal</strong> for self-service subscription management.</li>
+            <li><strong>Webhook synchronization</strong> (async processing, retries, reconciliation).</li>
+            <li><strong>Idempotency verification</strong> for provider requests.</li>
+            <li><strong>Retention verification</strong> and churn analytics.</li>
+            <li><strong>Feature flag system</strong> and audit logs.</li>
+            <li><strong>API integrations</strong> for third-party apps.</li>
+            <li><strong>Advanced automation</strong> (rule engine, retry storm protection, poisoning jobs).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Roadmap Focus</h2>
+          <ul>
+            <li><strong>Operational hardening</strong>: idempotency, rate limiting, defensive analytics.</li>
+            <li><strong>Automation</strong>: business rules engine + messaging templates.</li>
+            <li><strong>UI/UX</strong>: client plans page, configuration page, onboarding flow.</li>
+            <li><strong>Testing</strong>: spider test, JS tests, payment validation coverage.</li>
+            <li><strong>Architecture</strong>: clean modal partials, safer dependent deletes.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Current Focus</h2>
+          <ul>
+            <li><strong>Stabilize webhooks</strong> with async processing and retries.</li>
+            <li><strong>Improve checkout validation</strong> and user error messaging.</li>
+            <li><strong>Expand plan options</strong> (payment methods and subscription itemization).</li>
+            <li><strong>System documentation</strong> for onboarding and maintenance.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

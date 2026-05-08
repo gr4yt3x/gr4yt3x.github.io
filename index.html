@@ -68,6 +68,15 @@
       margin: 0;
     }
 
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
     .links {
       display: flex;
       flex-wrap: wrap;
@@ -193,7 +202,10 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>Gustavo Lemos</h1>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/59585859?v=4" alt="Gustavo Lemos">
+        <h1 style="margin: 0;">Gustavo Lemos</h1>
+      </div>
       <p class="subtitle">Software Developer — writing code, building things. 👋<br> You can see full information about my projects on my LinkedIn profile :)</p>
 
       <div class="links">
